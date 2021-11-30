@@ -5,8 +5,12 @@
 	"LogToFile": true,
 	"enableAutoScale": true,
 	"instancesPerNode": 1,
-	"instanceCountBuffer": 1,
+	"instanceCountBuffer": 5,
 	"percentBuffer": 25,
+//The amount of minutes of no scaling up activity before we decide we might want to see if we should scale down (i.e., after hours--reduce costs)
+    "idleMinutes": 60,
+// % of active connections to total instances that we want to trigger a scale down if idleMinutes passes with no scaleup
+    "connectionIdleRatio": 25,
 	"minInstanceCount": 0,
 	"maxInstanceCount": 250,
 	"scaleDownByAmount": 1,
@@ -14,6 +18,8 @@
 	"subscriptionId": "",
 	"resourceGroup": "",
 	"virtualMachineScaleSet": "",
+// Azure App Insights ID for logging and metrics (set by Terraform)
+    "appInsightsId": "",
 	"appInsightsInstrumentationKey": "",
 	"region": ""
 }
