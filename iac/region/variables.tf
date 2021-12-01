@@ -56,7 +56,7 @@ variable "matchmaker_admin_username" {
 
 #Matchmaker uses Locally Redundant Storage by default
 variable "matchmaker_vm_storage_account_type" {
-  default = "Premium_SSD_LRS"
+  default = "Premium_LRS"
 }
 
 #Signaling Server SKU for the VMSS cluster. NV6 have the NVidia GPUs and are more widely available,
@@ -90,5 +90,5 @@ variable "backend_admin_username" {
 
 #Signaling Servers use Locally Redundant Storage by default
 variable "backend_vmss_storage_account_type" {
-  default = "Premium_SSD_LRS"
+  default = "Premium_LRS"
 }
