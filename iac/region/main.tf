@@ -121,8 +121,8 @@ resource "azurerm_public_ip" "pip" {
   sku                 = "Standard"
   domain_name_label   = lower(format("%s-%s", "mmvm", var.base_name))
 
-  priority = "Spot"
-  eviction_policy = "Deallocate"
+  /*priority = "Spot"
+  eviction_policy = "Deallocate"*/ #user addeded NOT VALID
 }
 
 resource "azurerm_network_interface" "nic" {
@@ -276,8 +276,8 @@ resource "azurerm_windows_virtual_machine_scale_set" "vmss" {
   enable_automatic_updates = true
   upgrade_mode             = "Automatic"
 
-  priority = "Spot"
-  eviction_policy = "Deallocate"
+  /*priority = "Spot"
+  eviction_policy = "Deallocate"*/ #user addeded NOT VALID
 
   identity {
     type = "SystemAssigned"
