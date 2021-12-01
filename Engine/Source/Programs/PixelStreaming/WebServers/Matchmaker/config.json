@@ -12,7 +12,7 @@
 // % of active connections to total instances that we want to trigger a scale down if idleMinutes passes with no scaleup
     "connectionIdleRatio": 25,
 	"minInstanceCount": 1,
-	"maxInstanceCount": 5,
+	"maxInstanceCount": 3,
 	"scaleDownByAmount": 1,
 	"minMinutesBetweenScaledowns": 60,
 	"subscriptionId": "",
